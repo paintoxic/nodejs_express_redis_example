@@ -1,0 +1,50 @@
+{
+  "name": "nodejs_express_redis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r tsconfig-paths/register ./src/index.js",
+    "compile": "tsc --outDir /build/dist",
+    "dev": "nodemon | pino-pretty",
+    "dev:debug": "nodemon --config nodemon.debug.json | pino-pretty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git:paintoxic/nodejs_express_redis_example"
+  },
+  "keywords": [],
+  "author": "paintoxic <paintoxic1@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-openapi-validator": "^4.12.7",
+    "express-unless": "^0.5.0",
+    "morgan": "^1.10.0",
+    "pino": "^6.11.2",
+    "redis": "^3.1.0",
+    "swagger-ui-express": "^4.1.6",
+    "tsconfig-paths": "^3.9.0",
+    "uuid": "^8.3.2",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.33",
+    "@types/cors": "^2.8.10",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^14.14.37",
+    "@types/pino": "^6.3.7",
+    "@types/redis": "^2.8.28",
+    "@types/swagger-ui-express": "^4.1.2",
+    "@types/uuid": "^8.3.0",
+    "@types/yamljs": "^0.2.31",
+    "node": "^15.12.0",
+    "nodemon": "^2.0.7",
+    "pino-pretty": "^4.7.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  }
+}

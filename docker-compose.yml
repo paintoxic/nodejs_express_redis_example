@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  nodejs_express_redis:
+    container_name: nodejs_express_redis
+    image: service/nodejs_express_redis
+    build: .
+    environment:
+      APP_ID : nodejs_express_redis
+      PORT : 6500      
+      OPENAPI_FILE_PATH : ./oas3.yaml
+      OPENAPI_SPEC : /spec
+      OPENAPI_DOCS : /docs
+      OPENAPI_ENABLE_RESPONSE_VALIDATION : "true"
+      OPENAPI_ENABLE_REQUEST_VALIDATION : "true"
+      REDIS_CLIENT : redis-client
+      REDIS_PORT : 6379
+      REDIS_HOST : example-redis
+    ports:
+      - 8000:6500
+
+  example-redis:
+    container_name: redis-example
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"    
+    restart: always
